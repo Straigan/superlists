@@ -57,7 +57,7 @@ class NewVisitorTest(unittest.TestCase):
 
         # Страница снова обновляется, и теперь показывает оба элемента её списка
         table = self.browser.find_element(By.ID, 'id_list_table')
-        rows = self.browser.find_element(By.TAG_NAME, 'tr')
+        rows = table.find_elements(By.TAG_NAME, 'tr')
         self.assertIn('1: Купить павлиньи перья', [row.text for row in rows])
         self.assertIn('2: Сделать мушку из павлиньих перьев', [row.text for row in rows])
 
