@@ -69,8 +69,8 @@ class ListViewTest(TestCase):
     def test_displays_only_items_for_that_list(self):
         '''тест: отображаются только для этого списка'''
         correct_list = List.objects.create()
-        Item.objects.create(text='itemey 1', list=correct_list)
-        Item.objects.create(text='itemey 2', list=correct_list)
+        Item.objects.create(text='itemy 1', list=correct_list)
+        Item.objects.create(text='itemy 2', list=correct_list)
         other_list = List.objects.create()
         Item.objects.create(text='другой элемент 1 списка', list=other_list)
         Item.objects.create(text='другой элемент 2 списка', list=other_list)
